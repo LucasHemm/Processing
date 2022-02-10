@@ -10,8 +10,10 @@ void setup() {
 void MethodOne()
 {
   String output = "";
-/*LØSNING: Variablen output er ikke deklareret i metodens scope men derimod i if statementet, derfor kan println ikke printe den. En løsning kan være at
- declare output i metodens scope så den kan bruge både i if statement og uden for if statement - som vist ovenover med: String output = "";*/
+/*SOLUTION:The variable output is not declared within the methods scope, but inside the if statements scope. this is why println() cant print it. a solution could be to 
+ declare the output inside the methods scope so it can be used both inside of the if statement and outside of it. as shown above with: String output="";
+ */
+ 
   int i = 1000; // You are not allowed to change this line. 
   
   int max = 10;
@@ -32,9 +34,9 @@ void MethodOne()
 */
 void MethodTwo() 
 {
-  /*LØSNING: en løsning på dette problem kunne være at lave en samling af if og if else statements
-  som printer ugedagens navn og om det er weekend, løsningen som beskrevet er skrevet ind i koden.
-  
+  /*SOLUTION:
+  a solution to the problem could be to have a collection of if() and if else() statements which print the weekdays name
+  and if its a weekend, the solution is written into the code below.
   */
   
   
