@@ -18,7 +18,7 @@ int rectH = 250;
 color off = color(175);
 
 //on or off
-/*3.c opgaven er løst ved at bruge 3 forskellige til at holde styr på hvornår farverne skal være tændte
+/*3.c opgaven er løst ved at bruge 3 forskellige variable til at holde styr på hvornår farverne skal være tændte
 og hvornår de skal være slukkede.
 */
 
