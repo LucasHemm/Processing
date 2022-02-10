@@ -18,7 +18,9 @@ int rectH = 250;
 color off = color(175);
 
 //on or off
-
+/*3.c opgaven er løst ved at bruge 3 forskellige til at holde styr på hvornår farverne skal være tændte
+og hvornår de skal være slukkede.
+*/
 
 void setup() 
   {
@@ -26,21 +28,66 @@ void setup()
   background(backgroundColor);
   rectMode(CENTER);
   ellipseMode(CENTER);
-
-
-  }
-
-
-void draw()
-  {
   fill(traficLightColor);
   rect(rectX, rectY, rectW, rectH);
   fill(off);
   ellipse(250,280,75,75); 
   ellipse(250,202,75,75);
   ellipse(250,125,75,75);
-  
-  
-  
+
+
+  }
+
+
+int red = 0;
+int yellow = 1;
+int green = 2;
+
+void draw()
+  {
+  delay(1000);
+  if(red == 0) 
+    {
+      red = 1;
+      fill(redLight);
+      ellipse(250,125,75,75);
+    } 
+   else if(red == 1)
+    {
+       
+      fill(off);
+      ellipse(250,125,75,75);
+      red = 2;
+      yellow = 1;
+    } 
+   else if (yellow == 1)
+    {
+      fill(yellowLight);
+      ellipse(250,202,75,75);
+      yellow = 0;
+    } 
+   else if (yellow == 0)
+   {
+     fill(off);
+     ellipse(250,202,75,75);
+      yellow = 2;
+      //red = 0;
+      green = 2;
+   }
+  else if (green == 2)
+   {
+    fill(greenLight);
+    ellipse(250,280,75,75); 
+    green = 0;
+   } 
+  else if (green == 0)
+   {
+     fill(off);
+    ellipse(250,280,75,75); 
+    green = 1;
+    red = 0;
+   }
+    
+   
   
   }
