@@ -17,9 +17,9 @@ int rectH = 250;
 //3.b turned off effect
 color off = color(175);
 
-//on or off
-/*3.c opgaven er løst ved at bruge 3 forskellige variable til at holde styr på hvornår farverne skal være tændte
-og hvornår de skal være slukkede.
+/*3.c 
+the assignment is done by using 3 different variables
+to keep track of when the lights should be on or off.
 */
 
 void setup() 
