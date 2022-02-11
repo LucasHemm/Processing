@@ -84,5 +84,16 @@ void MethodTwo()
     }
     
   // Print if it is weekend here:
+ if (weekend)
+   {
+   println("It's weekend");
+   } 
+ else 
+   {
+     println("It's a weekday");
+   }
+  
+  
+  
   
 }
