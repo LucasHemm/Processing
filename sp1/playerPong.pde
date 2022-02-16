@@ -1,6 +1,6 @@
 class playerPong{
 
-int size =60;
+int size = 60;
 int playerPongSpeed = 2;
 int xPos = 0;
 String playerName = " ";
