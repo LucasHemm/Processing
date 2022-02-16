@@ -3,6 +3,7 @@ class playerPong{
 int size = 60;
 int playerPongSpeed = 2;
 int xPos = 0;
+int yPos = 0;
 String playerName = " ";
 
 // player1key1 = 'w';
