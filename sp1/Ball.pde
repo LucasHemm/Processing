@@ -2,11 +2,12 @@ class Ball {
 
   
   int ballXPosStart = 300;
-  int ballYPosStart = 300;
+  int ballYPos = 300;
   int ballSize = 32;
-  int ballSpeed = 2;
-  int ballXPos = ballXPosStart;
-  int X = 300;
+  int ballXSpeed = 2;
+  int ballYSpeed = 2;
+  
+  //int X = 300;
   
 
   Ball() {
@@ -16,22 +17,31 @@ class Ball {
   void displayBall() {
     fill(0);
     ellipseMode(CENTER);
-    ellipse(X, ballYPosStart, ballSize,ballSize);
+    ellipse(ballXPos, ballYPos, ballSize,ballSize);
   
   
-     X = X + ballSpeed;
+     ballXPos = ballXPos + ballXSpeed;
+     ballYPos = ballYPos + ballYSpeed;
   
-     if ((X  > width) || (X < 0)){
-     ballSpeed = ballSpeed * -1;
+     if ((ballXPos  > width) || (ballXPos < 0)){
+     ballXSpeed = ballXSpeed * -1;
+     delay(500);
+     ballXPos = 300;
      }
+     
+     if((ballYPos > 468 || ballYPos < 132)) {
+     ballYSpeed = ballYSpeed * -1;
+     
+     }
+     
      
     
   }
   
    void intersect2(playerPong2 pong2) {
   
-  int ballX = X;
-  int ballY = ballYPosStart;
+  int ballX = ballXPos;
+  int ballY = ballYPos;
   int player2X =  pong2.xPos;
   int player2Y = pong2.yPosKeys;
   
@@ -42,7 +52,10 @@ class Ball {
 
   if(ballX >= 546 && diff < 30 ){
     
-      ballSpeed = ballSpeed * -1;
+      
+    
+      ballXSpeed = ballXSpeed * -1;
+      
       println("ballX: " + ballX);
       println("ballY: " + ballY);
       println("player2Y: " + player2Y);
@@ -55,8 +68,8 @@ class Ball {
  
   void intersect1(playerPong pong1) {
   
-  int ballX = X;
-  int ballY = ballYPosStart;
+  int ballX = ballXPos;
+  int ballY = ballYPos;
   int player1X =  pong1.xPos;
   int player1Y = pong1.yPos;
   
@@ -67,7 +80,7 @@ class Ball {
 
   if(ballX <= 46 && diff < 30 ){
     
-      ballSpeed = ballSpeed * -1;
+      ballXSpeed = ballXSpeed * -1;
       println("ballX: " + ballX);
       println("ballY: " + ballY);
       println("player1Y: " + player1Y);
