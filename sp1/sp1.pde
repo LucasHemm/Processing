@@ -30,21 +30,28 @@ line(0, 590, width, 490);
 
 
 void draw() {
-  background(255);
-  //text("Player 1", 100,90);
-  //text("Player 2", 400,90);
+background(255);
 line(0, 100, width, 100);
 line(0, 490, width, 490);
-  
 gameScore.displayScore();
-  
 player1.display1();
 player2.display();
 gameBall.displayBall();
 gameBall.intersect2(player2);
 gameBall.intersect1(player1);
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 void keyPressed(){
   keys[key] = true;
